@@ -1,0 +1,23 @@
+.header{
+  background-color: aqua;
+  text-align: center;
+  /* text-shadow: 2px 2px blue; */
+  font-size: larger;
+  height: 50px;
+  align-content: center;
+}
+#ulll{
+  display: flex;
+  justify-content: space-around;
+  background-color: azure;
+  list-style-type: none;
+  
+}
+.list{
+  color: black;
+  background-color: azure;
+
+}
+.list:hover{
+  background-color: beige;
+}
