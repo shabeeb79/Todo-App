@@ -1,32 +1,48 @@
-// import React from "react";
 
-// import React from 'react'
 
-// const Fetching = () => {
-    // async function fetc(){
-    //   const data ="https://jsonplaceholder.typicode.com/posts";
-    //   const responce = await fetch(data);
-    //   const vall = await responce.json();
-    //   console.log(vall);
-    // fetch("https://jsonplaceholder.typicode.com/posts")
-    // .then()
-      
-    // }
-  // return (
-  // <div>
-  //   {
-       
-        // vall.map((items)=>{
-        //     <div key={items.id}>
-        //         <p>{}</p>
-        //     </div>
+import { useEffect, useState } from "react";
+import axios from "axios";
 
-        // })
-      
-//     }
-//     </div>
+
+
+const Fetching = () => {
+  const[val,setVal]=useState([])
+  useEffect(()=>{
+  async function fetc() {
     
-//   )
-// }
+    
+      try{
+      const data ="https://dummyjson.com/quotes";
+      const responce = await axios.get(data);
+      const vall = responce.data
+      setVal(vall.quotes.slice(0,10))
+      }
+      catch(err){
+        console.log(err);
+        
+      }
+    }
+  
+      fetc()
+  },[])
+      
+    
+  return (
+    
+  <div>
+    {
+      
+      val.map((items)=>(
+            <div key={items.id}>
+                <p>{items.id}{items.quote}</p>
+            </div>
 
-// export default Fetching;
+        ))
+      
+    }
+    </div>
+    
+  )
+}
+
+export default Fetching;

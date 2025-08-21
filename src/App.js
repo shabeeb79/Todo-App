@@ -1,17 +1,18 @@
 // import React, { useState } from 'react';
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 // import { useState } from 'react';
 import "./App.css";
-import { cleanup } from "@testing-library/react";
+import Formval from "./formval";
+// import { cleanup } from "@testing-library/react";
 // import Loggin from './components/Loggin';
 // import Logout from './components/Logout';
 // import Head from './header/header';
 // import Section from './items.js';
 // import Sectio from './components/section.js';
 function App() {
-  const [num , setNum] = useState(0);
-  const [num1 , setNum1] = useState(0);
-  const [color,setColor]=useState("white")
+  //   const [num , setNum] = useState(0);
+  //   const [num1 , setNum1] = useState(0);
+  //   const [color,setColor]=useState("white")
   // let arr=[
   //            {name:"A" ,place:"palakkad",age:29},
   //            {name:"B",place:"palakkad",age:30},
@@ -55,6 +56,14 @@ function App() {
   // }
   // const logout =()=>{
   //   setLog(false);
+//   const [val, setval] = useState(0);
+// function counter(){
+//   setval(val+5)
+// }
+// function counter1(){
+//   setval(prevval => prevval+5)
+// }
+
 
   // }
   // let [val,setVal] =useState(1)
@@ -91,43 +100,67 @@ function App() {
   // const funny = (e) => {
   //   console.log(e.target.value);
   // };
-      // useEffect(()=>{
-      //   setColor("white")
-      //    const id = setTimeout(()=>{
-      //        setColor("blue")
-      //     },num*1500)
-      //    return (()=>{
-      //      clearTimeout(id)
-      //    })
-      //  },[num])
-      useEffect(()=>{
-      console.log("shabeeb"+num)
-      return (()=>{
-        console.log(num);
-        
-      })
-      },[num,num1])
+  // useEffect(()=>{
+  //   setColor("white")
+  //    const id = setTimeout(()=>{
+  //        setColor("blue")
+  //     },num*1500)
+  //    return (()=>{
+  //      clearTimeout(id)
+  //    })
+  //  },[num])
+  // useEffect(()=>{
+  // console.log("shabeeb"+num)
+  // return (()=>{
+  //   console.log(num);
+  // const inputtt = useRef(null);
+
+  // })
+  // },[num,num1])
+  //       const inputRef = useRef(null); // Create a ref
+
+  // useEffect(() => {
+  //   inputRef.current.focus(); // Focus the input after the component shows up
+  // }, []);
   return (
     <div className="App">
-   
-      
-     
-
+      {/* <input ref={inputtt}></input>
+      <button
+        onClick={() => {
+          const val = inputtt.current.value;
+          alert(val);
+        }
+      } */}
+{/*           
+      >
+        @
+      </button>  */}
+     {/* <button onClick={counter}>{val}</button> */}
+     {/* {console.log("nnn")}
+      */}
+     {/* <button onClick={counter1}>{val}</button>
+      {console.log("nnn")} */}
+     < Formval/>
+      {/*       
+     <label className="tootle"<br/>
+       <button onMouseEnter={()=>setShow(!hide)} onMouseLeave={()=>setShow(hide)}>click</button>
+     </label> */}
+      {/* 
       <p>{num}</p>
       <button onClick={()=>setNum(num+1)}>+</button>
     
       <p>{num1}</p>
-      <button onClick={()=>setNum1(num1+1)}>+</button>
-       {/* <div >
+      <button onClick={()=>setNum1(num1+1)}>+</button> */}
+      {/* <div >
          {
          color&&num ?(
           <div style={{background:color,height:"80vh"}}>
 
           </div>
          ):null */}
-         {/* } */}
-       {/* </div> */}
-   
+      {/* } */}
+      {/* </div> */}
+
       {/* >style={{backgroundColor:color,height:"100vh"}}> */}
 
       {/* {log?<Loggin />:<Logout />} */}
@@ -200,8 +233,14 @@ function App() {
       //   </select>
       //   <button type="submit">submit</button>
       // </form> */}
+
+      {/*  
+    // <div>
+    //   <input ref={inputRef} type="text" placeholder="Type here..." />
+    // </div>
+   */}
     </div>
-  )
+  );
 }
 
 export default App;
